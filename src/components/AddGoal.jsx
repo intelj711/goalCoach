@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../style.css';
 import { connect } from 'react-redux';
 import { goalRef } from '../firebase';
 
@@ -22,6 +23,7 @@ class AddGoal extends Component {
       <div className="form-inline">
         <div className="form-group">
           <input
+              id="add-goal"
             type="text"
             placeholder="Add a goal"
             className="form-control"
@@ -29,6 +31,7 @@ class AddGoal extends Component {
             onChange={event => this.setState({title: event.target.value})}
           />
           <button
+              id="add-goal-btn"
             className="btn btn-success"
             type="button"
             onClick={() => this.addGoal()}

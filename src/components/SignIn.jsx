@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../style.css';
 import { Link } from 'react-router';
 import { firebaseApp } from '../firebase';
 
@@ -27,6 +28,12 @@ class SignIn extends Component {
     return (
       <div className="form-inline" style={{margin: '5%'}}>
         <h2>Sign In</h2>
+        <div className="tips">
+          Hi everyone! This is a React-Redux App that help you and team to create goals list
+          with Google Firebase as backend database support. You can use it as your own TO-DO list,
+          or create a team goals list with different email and password!<br/>
+          Try signup/signin and let's work on it!
+        </div>
         <div className="form-group">
           <input
             className="form-control"

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../style.css';
 import { connect } from 'react-redux';
 import { setCompleted } from '../actions';
 import { completeGoalRef } from '../firebase';
@@ -33,6 +34,7 @@ class CompleteGoalList extends Component {
           })
         }
         <button
+            id="clear"
           className="btn btn-primary"
           onClick={() => this.clearCompleted()}
         >

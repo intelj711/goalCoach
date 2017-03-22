@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../style.css';
 import { connect } from 'react-redux';
 import { firebaseApp } from '../firebase';
 import AddGoal from './AddGoal';
@@ -12,8 +13,12 @@ class App extends Component {
 
   render() {
     return (
-      <div style={{margin: '5px'}}>
+      <div className="container">
         <h3>Goal Coach</h3>
+          <div className="tips">
+              Tips: Feel free add a goal! Move it down by clicking "Complete" when you finish it,
+              and "clear all" at once when you/team make everything done!
+          </div>
         <AddGoal />
         <hr />
         <h4>Goals</h4>
@@ -34,7 +39,6 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
-  // console.log('state', state);
   return {}
 }
 
